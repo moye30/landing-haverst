@@ -6,50 +6,50 @@ const serviceCategories = [
     icon: Scissors,
     title: 'CORTE',
     items: [
-      { name: 'Corte', price: '$350.00' }
+      { name: 'Corte' }
     ]
   },
   {
     icon: Palette,
     title: 'TINTES',
     items: [
-      { name: 'Gloss', price: '$300.00' },
-      { name: 'Matiz', price: '$600.00 - $800.00' },
-      { name: 'Retoque + Matiz', price: '$1400.00 - $1700.00' },
-      { name: 'Tinte parejo', price: '$1500.00 - $2400.00' }
+      { name: 'Gloss' },
+      { name: 'Matiz' },
+      { name: 'Retoque + Matiz' },
+      { name: 'Tinte parejo' }
     ]
   },
   {
     icon: Sparkles,
     title: 'EFECTO DE COLOR',
     items: [
-      { name: 'Sin decoloración', price: '$1900.00 - $2700.00' },
-      { name: 'Efecto de color', price: '$2900.00 - $3700.00' },
-      { name: 'Retoque (5 meses Max)', price: '$2800.00' },
-      { name: 'Contour', price: '$900.00' }
+      { name: 'Sin decoloración' },
+      { name: 'Efecto de color' },
+      { name: 'Retoque (5 meses Max)' },
+      { name: 'Contour' }
     ]
   },
   {
     icon: Droplets,
     title: 'TRATAMIENTOS',
     items: [
-      { name: 'Renaissance Circle', price: '$600.00' },
-      { name: 'Love Curl', price: '$700.00' },
-      { name: 'Love Smoothing', price: '$700.00' },
-      { name: 'NouNou', price: '$700.00' },
-      { name: 'Heart Of Glass', price: '$700.00' },
-      { name: 'Oibutter + oil liquid', price: '$800.00 - $900.00' },
-      { name: 'Keratin Wonder', price: '$1200.00 - $1500.00' }
+      { name: 'Renaissance Circle' },
+      { name: 'Love Curl' },
+      { name: 'Love Smoothing' },
+      { name: 'NouNou' },
+      { name: 'Heart Of Glass' },
+      { name: 'Oibutter + oil liquid' },
+      { name: 'Keratin Wonder' }
     ]
   },
   {
     icon: Zap,
     title: 'KERATINAS',
     items: [
-      { name: 'Keratina Molecular (Antifrizz + poliprotehina)', price: '$1600.00 - $2800.00' },
-      { name: 'Curly Botox', price: '$800.00' },
-      { name: 'Poliprotehina', price: '$1600.00 - $2800.00' },
-      { name: 'Alaciado Ultra', price: '$2000.00 - $3000.00' }
+      { name: 'Keratina Molecular (Antifrizz + poliprotehina)' },
+      { name: 'Curly Botox' },
+      { name: 'Poliprotehina' },
+      { name: 'Alaciado Ultra' }
     ]
   }
 ];
@@ -91,17 +91,14 @@ export function Services() {
                 {category.title}
               </h3>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {category.items.map((item, itemIndex) => (
                   <div 
                     key={itemIndex}
-                    className="flex justify-between items-start gap-4 pb-3 border-b border-gray-200 last:border-0"
+                    className="pb-3 border-b border-gray-200 last:border-0"
                   >
-                    <span className="text-gray-700 text-sm leading-tight flex-1">
+                    <span className="text-gray-700 text-sm leading-tight">
                       {item.name}
-                    </span>
-                    <span className="text-black font-medium text-sm whitespace-nowrap">
-                      {item.price}
                     </span>
                   </div>
                 ))}
